@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Values:
+{% endblock %}
+
+{% block main %}
+
+    Name:   {{name}}
+    Price:  {{usd(price)}}
+    Symbol: {{symbol}}
+
+{% endblock %}

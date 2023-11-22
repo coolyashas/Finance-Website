@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Shares
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+    <label>Choose Symbol:</label>
+    <select name="symbol" id="symbol">
+        {% for dict in dictlist %}
+        {% set symbol=dict["symbol"] %}
+        <option value="{{ symbol }}">{{dict["symbol"]}}-{{(dict["sharesowned"])}}</option>
+        {% endfor %}
+    </select>
+    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Number of shares" type="text">
+    <br><br>
+
+    <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+{% endblock %}

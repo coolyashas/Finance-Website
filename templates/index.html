@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+<h1>
+Portfolio
+</h1>
+
+{% block main %}
+<table>
+    <tr>
+        <td>Symbols</td><td>No. of shares</td><td>Avg price</td><td>Total</td><td>Profit/Loss</td>
+    </tr>
+    {% for dict in both %}
+        <tr>
+            <td>{{dict["symbol"]}}</td>
+            <td>{{dict["sharesowned"]}}</td>
+            <td>{{usd(lookup(dict["symbol"])["price"])}}</td>
+            <td>{{usd(dict["sharesowned"]*lookup(dict["symbol"])["price"])}}</td>
+            <td>
+                {% for x in proforloss %}
+                {% if x==dict["symbol"] %}
+                {{proforloss[x]}}
+                {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<table>
+    <tr><td>Cash: {{usd(cash)}}</td></tr>
+    <tr><td>Grand Total: {{usd(gtotal)}}</td></tr>
+</table>
+{% endblock %}

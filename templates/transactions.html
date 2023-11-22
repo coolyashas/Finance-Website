@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+<table>
+    <tr><td>Symbol</td><td>Type</td><td>No. of shares</td><td>Price</td><td>Total</td><td>Date</td><td>Time</td></tr>
+    {% for dict in dicts %}
+        <tr>
+            <td>{{dict["symbol"]}}</td>
+            <td>{{dict["type"]}}</td>
+            <td>{{dict["shares"]}}</td>
+            <td>{{usd(dict["boughtorsoldat"])}}</td>
+            <td>{{usd(dict["multiplied"])}}</td>
+            <td>{{dict["date"]}}</td>
+            <td>{{dict["time"]}}</td>
+        </tr>
+    {% endfor %}
+    <tr></tr>
+</table>
+{% endblock %}
