@@ -1,3 +1,8 @@
+![image](https://github.com/coolyashas/Finance-Website/assets/32161167/ad3be29f-a3b0-4543-9fba-459e1189f333)
+![image](https://github.com/coolyashas/Finance-Website/assets/32161167/1eddfebd-d00f-444c-8116-70a06b535e7c)
+![image](https://github.com/coolyashas/Finance-Website/assets/32161167/db7d6bb1-a7bb-4e9b-8a67-e84ca642762a)
+![image](https://github.com/coolyashas/Finance-Website/assets/32161167/f5513239-29f6-4a9b-9252-49ecf681f8bd)
+
 ## Description
 
 This project is a stock trading finance website built with Flask. It allows users to buy and sell stocks, view their transaction history, and track their portfolio. The website utilizes the IEX Cloud API for real-time stock quotes.
